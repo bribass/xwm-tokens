@@ -1,8 +1,10 @@
 include <common.scad>
 
+TOKEN_DIAMETER = 21.362;
+
 // token base
 token_base() {
-    circle(d=21.362, $fn=6);
+    circle(d=TOKEN_DIAMETER, $fn=6);
 }
 
 // token symbol
