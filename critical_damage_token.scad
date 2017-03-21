@@ -2,7 +2,7 @@ include <common.scad>
 
 // token base
 token_base() {
-    polygon([[-5.34, 9.25], [5.34, 9.25], [10.681, 0], [5.34, -9.25], [-5.34, -9.25], [-10.681, 0]]);
+    circle(d=21.362, $fn=6);
 }
 
 // token symbol
