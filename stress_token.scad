@@ -1,6 +1,5 @@
 include <common.scad>
 
-// token base
 slope_intercepts = [
     [ 0, 7.66 ],           // top triangle edge
     [ -1.6865, 24.5658 ],  // top right clipped corner
@@ -20,12 +19,8 @@ token_base() {
             si_intersect_for(slope_intercepts, i, i == (len(slope_intercepts) - 1) ? 0 : i + 1)
     ]);
 }
-
-// token symbol
-translate([0, 0, TOKEN_THICKNESS - WELL_DEPTH]) {
-    linear_extrude(WELL_DEPTH) {
-        scale([2.25, 1, 1]) {
-            text("!", font="Liberation Sans", halign="center", valign="center");
-        }
+token_symbol() {
+    scale([2.25, 1, 1]) {
+        text("!", font="Liberation Sans", halign="center", valign="center");
     }
 }

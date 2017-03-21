@@ -26,3 +26,12 @@ module token_base() {
         }
     }
 }
+
+// Module to create the token symbol given the 2D outline
+module token_symbol() {
+    translate([0, 0, TOKEN_THICKNESS - WELL_DEPTH]) {
+        linear_extrude(WELL_DEPTH) {
+            children();
+        }
+    }
+}
