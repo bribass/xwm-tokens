@@ -46,8 +46,8 @@ difference() {
         linear_extrude(TOKEN_THICKNESS + TOLERANCE) {
             polygon([
                      [0, 0],
-                     [cos(theta - 2) * TOKEN_DIAMETER, sin(theta - 2) * TOKEN_DIAMETER],
-                     [cos(theta - 20) * TOKEN_DIAMETER, sin(theta - 20) * TOKEN_DIAMETER]
+                     point_on_circle(angle=theta - 2, r=TOKEN_DIAMETER),
+                     point_on_circle(angle=theta - 20, r=TOKEN_DIAMETER)
                     ]);
         }
     }

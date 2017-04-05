@@ -35,3 +35,7 @@ module token_symbol() {
         }
     }
 }
+
+// Function to determine a point on a circle (for use in calls to polygon())
+function point_on_circle(angle, r) = [cos(angle) * r, sin(angle) * r];
+
