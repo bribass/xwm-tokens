@@ -1,15 +1,17 @@
+DESTDIR := .
+
 STL_FILES := \
-	cloak_token.stl \
-	critical_damage_token.stl \
-	evade_token.stl \
-	focus_token.stl \
-	ion_token.stl \
-	shield_token.stl \
-	stress_token.stl
+	$(DESTDIR)/cloak_token.stl \
+	$(DESTDIR)/critical_damage_token.stl \
+	$(DESTDIR)/evade_token.stl \
+	$(DESTDIR)/focus_token.stl \
+	$(DESTDIR)/ion_token.stl \
+	$(DESTDIR)/shield_token.stl \
+	$(DESTDIR)/stress_token.stl
 
 all: ${STL_FILES}
 
-%.stl: %.scad common.scad
+$(DESTDIR)/%.stl: %.scad common.scad
 	openscad -o $@ $<
 
 clean:
