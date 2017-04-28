@@ -1,4 +1,10 @@
-STL_FILES := critical_damage_token.stl evade_token.stl focus_token.stl ion_token.stl shield_token.stl stress_token.stl
+STL_FILES := \
+	critical_damage_token.stl \
+	evade_token.stl \
+	focus_token.stl \
+	ion_token.stl \
+	shield_token.stl \
+	stress_token.stl
 
 all: ${STL_FILES}
 
