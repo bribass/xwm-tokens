@@ -42,3 +42,5 @@ function point_on_circle(angle, r) = [cos(angle) * r, sin(angle) * r];
 // Function to determine the central angle a chord of a circle sweeps out
 function angle_of_chord(r, l) = 2 * asin(l / (2 * r));
 
+// Function to determine a new point that is a set distance and angle from an existing point
+function point_at_angle(point, angle, dist) = point + point_on_circle(angle, dist);

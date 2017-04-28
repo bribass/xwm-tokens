@@ -1,4 +1,5 @@
 STL_FILES := \
+	cloak_token.stl \
 	critical_damage_token.stl \
 	evade_token.stl \
 	focus_token.stl \
