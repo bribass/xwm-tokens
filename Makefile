@@ -9,6 +9,7 @@ STL_FILES := \
 	$(DESTDIR)/focus_token.stl \
 	$(DESTDIR)/ion_token.stl \
 	$(patsubst %,$(DESTDIR)/numeric_token_%.stl,$(shell seq 1 $(MAX_NUMERIC))) \
+	$(DESTDIR)/ordnance_token.stl \
 	$(DESTDIR)/shield_token.stl \
 	$(DESTDIR)/stress_token.stl \
 	$(patsubst %,$(DESTDIR)/target_lock_token_%.stl,$(shell ./letterseq.pl $(MAX_TARGETLOCK)))
