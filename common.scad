@@ -36,6 +36,31 @@ module token_symbol() {
     }
 }
 
+// Module to create 2D guide nubs along the X axis
+NUB_WIDTH = 3.75;
+NUB_HEIGHT = 3.25;
+NUB_RADIUS = NUB_WIDTH / 2;
+NUB_SPACING = 22;
+NUB_SPACING_HALF = NUB_SPACING / 2;
+module guide_nubs() {
+    polygon([
+             [NUB_SPACING_HALF + NUB_WIDTH,    NUB_HEIGHT],
+             [NUB_SPACING_HALF + NUB_WIDTH,    -(NUB_HEIGHT - NUB_RADIUS)],
+             [NUB_SPACING_HALF,                -(NUB_HEIGHT - NUB_RADIUS)],
+             [NUB_SPACING_HALF,                0],
+             [-(NUB_SPACING_HALF),             0],
+             [-(NUB_SPACING_HALF),             -(NUB_HEIGHT - NUB_RADIUS)],
+             [-(NUB_SPACING_HALF + NUB_WIDTH), -(NUB_HEIGHT - NUB_RADIUS)],
+             [-(NUB_SPACING_HALF + NUB_WIDTH), NUB_HEIGHT]
+    ]);
+    translate([NUB_SPACING_HALF + NUB_RADIUS, -(NUB_HEIGHT - NUB_RADIUS)]) {
+        circle(r=NUB_RADIUS);
+    }
+    translate([-(NUB_SPACING_HALF + NUB_RADIUS), -(NUB_HEIGHT - NUB_RADIUS)]) {
+        circle(r=NUB_RADIUS);
+    }
+}
+
 // Function to determine a point on a circle (for use in calls to polygon())
 function point_on_circle(angle, r) = [cos(angle) * r, sin(angle) * r];
 

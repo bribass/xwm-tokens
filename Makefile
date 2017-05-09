@@ -3,6 +3,7 @@ DESTDIR := .
 MAX_NUMERIC = 12
 MAX_TARGETLOCK = 12
 STL_FILES := \
+	$(DESTDIR)/bomb_proximity_token.stl \
 	$(DESTDIR)/cloak_token.stl \
 	$(DESTDIR)/critical_damage_token.stl \
 	$(DESTDIR)/evade_token.stl \
