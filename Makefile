@@ -5,6 +5,7 @@ MAX_TARGETLOCK = 12
 STL_FILES := \
 	$(DESTDIR)/bomb_ion_token.stl \
 	$(DESTDIR)/bomb_proximity_token.stl \
+	$(DESTDIR)/bomb_seismic_token.stl \
 	$(DESTDIR)/cloak_token.stl \
 	$(DESTDIR)/critical_damage_token.stl \
 	$(DESTDIR)/evade_token.stl \
