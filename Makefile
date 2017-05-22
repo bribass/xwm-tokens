@@ -16,7 +16,8 @@ STL_FILES := \
 	$(DESTDIR)/ordnance_token.stl \
 	$(DESTDIR)/shield_token.stl \
 	$(DESTDIR)/stress_token.stl \
-	$(patsubst %,$(DESTDIR)/target_lock_token_%.stl,$(shell ./letterseq.pl $(MAX_TARGETLOCK)))
+	$(patsubst %,$(DESTDIR)/target_lock_token_%.stl,$(shell ./letterseq.pl $(MAX_TARGETLOCK))) \
+	$(DESTDIR)/tractor_beam_token.stl
 
 all: ${STL_FILES}
 
