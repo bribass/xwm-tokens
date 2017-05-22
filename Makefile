@@ -3,6 +3,7 @@ DESTDIR := .
 MAX_NUMERIC = 12
 MAX_TARGETLOCK = 12
 STL_FILES := \
+	$(DESTDIR)/bomb_cluster_token_guide.stl $(DESTDIR)/bomb_cluster_token_noguide.stl \
 	$(DESTDIR)/bomb_ion_token.stl \
 	$(DESTDIR)/bomb_proximity_token.stl \
 	$(DESTDIR)/bomb_seismic_token.stl \
@@ -21,6 +22,9 @@ all: ${STL_FILES}
 
 $(DESTDIR)/%.stl: %.scad common.scad
 	openscad -o $@ $<
+
+$(DESTDIR)/bomb_cluster_token_%.stl: bomb_cluster_token.scad common.scad
+	openscad -D 'PART="$*"' -o $@ $<
 
 $(DESTDIR)/numeric_token_%.stl: numeric_token.scad common.scad
 	openscad -D 'NUMBER="$*"' -o $@ $<
