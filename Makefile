@@ -9,6 +9,7 @@ STL_FILES := \
 	$(DESTDIR)/bomb_seismic_token.stl \
 	$(DESTDIR)/cloak_token.stl \
 	$(DESTDIR)/critical_damage_token.stl \
+	$(DESTDIR)/condition_token.stl \
 	$(DESTDIR)/evade_token.stl \
 	$(DESTDIR)/focus_token.stl \
 	$(DESTDIR)/ion_token.stl \
