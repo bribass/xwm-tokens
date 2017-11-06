@@ -15,6 +15,7 @@ STL_FILES := \
 	$(DESTDIR)/ion_token.stl \
 	$(patsubst %,$(DESTDIR)/numeric_token_%.stl,$(shell seq 1 $(MAX_NUMERIC))) \
 	$(DESTDIR)/ordnance_token.stl \
+	$(DESTDIR)/reinforce_token_front.stl $(DESTDIR)/reinforce_token_rear.stl \
 	$(DESTDIR)/shield_token.stl \
 	$(DESTDIR)/stress_token.stl \
 	$(patsubst %,$(DESTDIR)/target_lock_token_%.stl,$(shell ./letterseq.pl $(MAX_TARGETLOCK))) \
@@ -30,6 +31,9 @@ $(DESTDIR)/bomb_cluster_token_%.stl: bomb_cluster_token.scad common.scad
 
 $(DESTDIR)/numeric_token_%.stl: numeric_token.scad common.scad
 	openscad -D 'NUMBER="$*"' -o $@ $<
+
+$(DESTDIR)/reinforce_token_%.stl: reinforce_token.scad common.scad
+	openscad -D 'SIDE="$*"' -o $@ $<
 
 $(DESTDIR)/target_lock_token_%.stl: target_lock_token.scad common.scad
 	openscad -D 'LETTER="$*"' -o $@ $<
