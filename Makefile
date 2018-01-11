@@ -13,6 +13,7 @@ STL_FILES := \
 	$(DESTDIR)/evade_token.stl \
 	$(DESTDIR)/focus_token.stl \
 	$(DESTDIR)/ion_token.stl \
+	$(DESTDIR)/jam_token.stl \
 	$(patsubst %,$(DESTDIR)/numeric_token_%.stl,$(shell seq 1 $(MAX_NUMERIC))) \
 	$(DESTDIR)/ordnance_token.stl \
 	$(DESTDIR)/reinforce_token_front.stl $(DESTDIR)/reinforce_token_rear.stl \
