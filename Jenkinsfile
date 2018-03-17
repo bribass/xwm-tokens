@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'rm -rf out && make DESTDIR=out'
+        sh 'rm -rf out && mkdir out && make DESTDIR=out'
         archiveArtifacts 'out/*.stl'
       }
     }
